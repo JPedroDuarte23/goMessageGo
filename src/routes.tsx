@@ -1,7 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import PaginaLogin from './pages/PaginaLogin'
 import GraficoDashboard from './pages/GraficoDashboard'
-import PaginaPadrao from './components/PaginaPadrao'
+import ConfigurarMensagens from './pages/ConfigurarMensagens'
+import { lazy } from 'react'
+
+const PaginaPadrao = lazy(() => import('./components/PaginaPadrao')) 
+
 
 export default function AppRouter() {
   return(
@@ -10,6 +14,7 @@ export default function AppRouter() {
         <Route path='/' element={<PaginaLogin />}/>
         <Route path='/dashboard' element={<PaginaPadrao />}>
           <Route index element={<GraficoDashboard />}/>
+          <Route path="mensagens" element={<ConfigurarMensagens />} />
         </Route>
       </Routes>
     </Router>

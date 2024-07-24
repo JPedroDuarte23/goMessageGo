@@ -3,6 +3,7 @@ import SideMenu from "../SideMenu";
 import Header from "../Header";
 
 export default function PaginaPadrao() {
+
   return (
     <div className="bg-gray-500 flex">
       <SideMenu />

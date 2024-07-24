@@ -1,12 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 import loginBlob from '../../assets/loginBlob.png'
-import Button from '../../components/Button/button'
-import Input from '../../components/Input/Input'
+import Button from '../../components/Button'
+import Input from '../../components/Input'
 
 export default function PaginaLogin() {
 
+  //NAVIGATE
+  const navigate = useNavigate();
+  
+  //LOGIN
   function formLoginHandler(event: React.FormEvent<HTMLFormElement>){
     event.preventDefault()
-    console.log("Funcionou")
+    navigate("/dashboard")
   }
 
   return (

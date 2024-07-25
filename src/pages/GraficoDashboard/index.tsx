@@ -12,7 +12,7 @@ export default function GraficoDashboard() {
 
   const data: DataObject= {
     tituloCard: "Mensagens com feedback positivo",
-    valor: "3122kkk"
+    valor: "3.100"
   }
 
   const [cardList, setCardList] = useState<DataObject[]>([data, data, data, data])

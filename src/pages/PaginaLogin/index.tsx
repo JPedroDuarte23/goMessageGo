@@ -31,7 +31,7 @@ export default function PaginaLogin() {
               password
             />
           </div>
-          <Button label='Entrar' />            
+          <Button label='Entrar' classname='p-4 rounded-md font-bold text-lg' />            
         </form>
       </div>
     </div> 

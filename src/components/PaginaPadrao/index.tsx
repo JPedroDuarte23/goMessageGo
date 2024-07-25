@@ -1,7 +1,8 @@
 import { Outlet, useLocation } from "react-router-dom";
-import SideMenu from "../SideMenu";
-import Header from "../Header";
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
+
+const SideMenu = lazy(() => import("../SideMenu"))
+const Header = lazy(() => import("../Header"))
 
 export default function PaginaPadrao() {
 

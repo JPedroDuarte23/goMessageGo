@@ -18,9 +18,9 @@ export default function GraficoDashboard() {
   const [cardList, setCardList] = useState<DataObject[]>([data, data, data, data])
 
   return (
-    <div className="pt-4 flex flex-col gap-4">
+    <div className="pt-4 flex flex-col gap-4 pr-10 pl-8">
       <ChartCarousel />
-      <div className={clsx(
+      <div className={clsx(   
         "flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-lime-700 scrollbar-track-transparent",
         {
           "overflow-x-scroll": cardList.length > 3,

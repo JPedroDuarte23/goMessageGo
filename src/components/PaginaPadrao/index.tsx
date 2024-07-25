@@ -26,8 +26,8 @@ export default function PaginaPadrao() {
   return (
     <div className="bg-gray-500 flex w-screen">
       <SideMenu />
-      <div className="flex-1 pl-8 pr-10">
-        <Header sectionName={sectionName}/>
+      <div className="flex-1">
+        <Header sectionName={sectionName} configMessage={sectionName === "Configurar mensagens"}/>
         <Outlet />
       </div>
     </div>

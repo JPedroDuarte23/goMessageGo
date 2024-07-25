@@ -21,7 +21,7 @@ export default function GraficoDashboard() {
     <div className="pt-4 flex flex-col gap-4">
       <ChartCarousel />
       <div className={clsx(
-        "flex gap-4  overflow-x-auto scrollbar-thin scrollbar-thumb-lime-700 scrollbar-track-transparent",
+        "flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-lime-700 scrollbar-track-transparent",
         {
           "overflow-x-scroll": cardList.length > 3,
         }

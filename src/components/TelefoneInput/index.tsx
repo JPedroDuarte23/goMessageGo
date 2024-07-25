@@ -9,7 +9,7 @@ export default function TelefoneInput() {
           <input className="w-8 bg-transparent focus:outline-none" type="text" value="+55" />
         </div>
       </div>
-      <div className="w-96 ml-4 p-4 bg-gray-50 rounded-lg shadow-input">
+      <div className="w-2/5 ml-4 p-4 bg-gray-50 rounded-lg shadow-input">
         <input className="focus:outline-none w-full bg-transparent" type="text" placeholder="Digite o número do telefone"/>
       </div>
     </div>

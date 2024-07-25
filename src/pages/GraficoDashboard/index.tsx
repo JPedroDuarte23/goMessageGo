@@ -1,29 +1,33 @@
 import { useState } from "react"
 import ChartCarousel from "../../components/ChartCarousel"
 import DataCard from "../../components/DataCard"
+import clsx from "clsx"
 
 type DataObject = {
   tituloCard: string,
-  valor: string,
-  dado: string
+  valor: string
 }
 
 export default function GraficoDashboard() {
 
   const data: DataObject= {
     tituloCard: "Mensagens com feedback positivo",
-    valor: "312",
-    dado: "mensagens"
+    valor: "3122kkk"
   }
 
-  const [cardList, setCardList] = useState<DataObject[]>([data, data, data])
+  const [cardList, setCardList] = useState<DataObject[]>([data, data, data, data])
 
   return (
     <div className="pt-4 flex flex-col gap-4">
       <ChartCarousel />
-      <div className="flex flex-1 gap-4">
+      <div className={clsx(
+        "flex gap-4  overflow-x-auto scrollbar-thin scrollbar-thumb-lime-700 scrollbar-track-transparent",
         {
-          cardList.map(card => <DataCard {...card} flexible={cardList.length > 2}/> )
+          "overflow-x-scroll": cardList.length > 3,
+        }
+        )} style={{ width: 'calc(100vw -  328px'}}>
+        {
+          cardList.map(card => <DataCard {...card}/> )
         }
       </div>
     </div>

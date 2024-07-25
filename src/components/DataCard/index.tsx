@@ -1,21 +1,15 @@
-import clsx from "clsx"
+
 
 interface DataCardProps{
   tituloCard: string,
-  valor: string,
-  dado: string,
-  flexible?: boolean
+  valor: string
 }
 
-export default function DataCard({ tituloCard, valor, dado, flexible = false }: DataCardProps) {
+export default function DataCard({ tituloCard, valor}: DataCardProps) {
   return (
-    <div className={clsx(
-      "bg-gray-50 h-32 p-3 rounded-xl flex flex-col gap-2",
-      {
-        "flex-1": flexible
-      })}>
-      <h2 className="font-bold font-quicksand text-base">{tituloCard}</h2>
-      <p className="text-lg flex items-center justify-center gap-2"><strong className="font-bold text-3xl text-lime-700">{valor}</strong> {dado}</p>
+    <div className="bg-gray-50 h-32 w-80 p-3 mb-3 rounded-xl flex items-center gap-3">
+      <h2 className="font-bold font-quicksand text-lg w-48">{tituloCard}</h2>
+        <strong className="font-bold text-4xl text-lime-700 pr-4">{valor}</strong>
     </div>
   )
 }

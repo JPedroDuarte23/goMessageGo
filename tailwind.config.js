@@ -1,4 +1,5 @@
 import { colors } from "./src/styles/colors"
+import { boxShadow } from './src/styles/boxShadow'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,8 +12,11 @@ export default {
       fontFamily: {
         quicksand: ['Quicksand', 'sans-serif'],
       },
-      colors
+      colors,
+      boxShadow
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')
+  ],
 }
